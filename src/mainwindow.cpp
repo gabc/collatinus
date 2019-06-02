@@ -215,6 +215,7 @@ void MainWindow::afficheLemsDic(bool litt, bool prim)
         t.replace("Æ","Ae");
         t.replace("œ","oe");
         t.replace("Œ","Oe");
+	t = Ch::deAccent(t);
         requete << t;
     }
     if (requete.empty()) requete << lineEdit->text();

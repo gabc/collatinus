@@ -842,6 +842,7 @@ MapLem LemCore::lemmatiseM(QString f, bool debPhr, int etape)
 {
     MapLem mm;
     if (f.isEmpty()) return mm;
+    f = Ch::deAccent(f);
     if ((etape > 3) || (etape <0)) // Condition terminale
     {
         mm = lemmatise(f);
